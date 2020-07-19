@@ -1,0 +1,33 @@
+extends layout
+
+block layout-content
+    div.main
+        div.Message
+            div.title 
+                h1
+                    | Login to 
+                    .oauth dashboard
+                .wrapper
+                    form
+                        hr.sep
+                        .group
+                            input(type="text" required)
+                            span.highlight
+                            span.bar
+                            label Email
+                        .group
+                            input(type="password" required)
+                            span.highlight
+                            span.bar
+                            label Password
+                        .btn-box
+                            button.btn.btn-submit(type="submit") Login
+                            br
+                            br
+                hr.sep
+                div.otherlogin 
+                    | Login with OAuth
+                .btn-box
+                    a(href="http://localhost:3001/oauth.html?redirect_uri=http://localhost:8000/api/callback")
+                        button.btn.btn-submit Login using OAuth
+                        br  

@@ -1,0 +1,24 @@
+extends layout
+
+block layout-content
+  div.main
+    h1
+        | Howdy, #{userProfile.nickname}!
+    div.Message
+      div.Title
+        h3
+            | Dashboard:
+        p 
+            | Profile
+      div.info
+        blockquote 
+            | Nickname :  #{userProfile.nickname} 
+            br
+            | Email :  #{userProfile.email}
+            br
+            | Phone# :  #{userProfile.phone} 
+            br
+            | Flag :  #{userProfile.flag} 
+    div.logout
+      a(href="/logout")
+        button.btn.btn-submit Log out

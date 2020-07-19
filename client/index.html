@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>OUATH</title>
+</head>
+  <body>
+    <div id="content"></div>
+
+    <script type="text/javascript" src="open.dist.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+      oauthOpen('http://localhost:3001/oauth.html', async (err, code) => {
+        const resToken = await axios.post('http://localhost:3001/api/token', { code: code.code });
+        const res = await axios.get('http://localhost:3001/secure', {
+          headers: { authorization: resToken.data['access_token'] }
+        });
+        document.querySelector('#content').innerHTML =
+          `The secret answer is ${res.data.answer}`;
+      });
+    </script>
+  </body>
+</html>

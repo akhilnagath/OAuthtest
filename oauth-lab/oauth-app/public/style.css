@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+body {
+  background-color: #34495e;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  color: #95a5a6;
+  font-size: 60px;
+}
+
+h3 {
+  font-family: 'Roboto Slab', serif;
+  color: #848b8b;
+  font-size: 40px;font-family: 'Roboto Slab', serif;
+  color: #848b8b;
+  font-size: 40px;
+}
+
+.info {
+  font-family: 'Roboto Slab', serif;
+  color: #ecf0f1cb;
+  font-size: 20px;
+}
+
+p{
+  font-family: 'Roboto Slab', serif;
+  color: #848b8b;
+  font-size: 25px;
+}
+
+.main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login {
+  top: 90%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-80%, -50%);
+}
+
+.button {
+  display: inline-block;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 0.317rem;
+  background-color: #95a5a6;
+  color: #34495e;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+.button:active {
+  box-shadow: inset 0 3px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.button:focus {
+  outline: thin dotted #444;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.logout {
+  position: relative;
+  top: 70%;
+  left: 90%;
+}
+
+/* Form, Inputs and buttons */
+
+form {
+  width: 320px;
+  margin: 45px auto;
+}
+
+form h1 {
+  font-size: 3em;
+  font-weight: 300;
+  text-align: center;
+  color: #e74c3c;
+}
+
+form h5 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #c6c6c6;
+}
+
+hr.sep {
+  background: #e74c3c;
+  box-shadow: none;
+  border: none;
+  height: 2px;
+  width: 25%;
+  margin: 0px auto 45px auto;
+}
+
+form .emoji {
+  font-size: 1.2em;
+}
+
+.group {
+  position: relative;
+  margin: 45px 0;
+}
+
+textarea {
+  resize: none;
+}
+
+input, textarea {
+  background: none;
+  color: #c6c6c6;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 320px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #c6c6c6;
+
+}
+input:focus, textarea:focus {
+  outline: none;
+}
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+  top: -14px;
+  font-size: 12px;
+  color: #e74c3c;
+}
+
+input:focus ~ .bar:before, textarea:focus ~ .bar:before {
+  width: 320px;
+}
+
+input[type="password"] {
+  letter-spacing: 0.3em;
+}
+
+label {
+  color: #c6c6c6;
+  font-size: 16px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 300ms ease all;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 320px;
+}
+
+.bar:before {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #e74c3c;
+  transition: 300ms ease all;
+  left: 0%;
+}
+
+.btn {
+  background: #fff;
+  color: #959595;
+  font-family: 'Roboto Slab', serif;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.btn:hover {
+  color: #8b8b8b;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
+}
+.btn.btn-link {
+  background: #e74c3c;
+  color: #34495e;
+}
+.btn.btn-link:hover {
+  background: #95a5a6;
+  color: #deeffd;
+}
+.btn.btn-submit {
+  background: #95a5a6;
+  color: #34495e;
+}
+.btn.btn-submit:hover {
+  background: #e74c3c;
+  color: #deeffd;
+}
+.btn-box {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.oauth {
+  color: #e74c3c;
+}
+
+.otherlogin {
+  font-family: 'Roboto Slab', serif;
+  color: #95a5a6;
+  font-size: 18px;
+  text-align: center;
+}
