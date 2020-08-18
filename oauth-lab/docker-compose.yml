@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  oauth-server:
+    build: ./oauth-server/.
+    restart: always
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./oauth-server/package.json:/opt/app/package.json
+      - ./oauth-server/package-lock.json:/opt/app/package-lock.json
+    networks:
+        default:
+  oauth-app:
+    build: ./oauth-app/.
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./oauth-app/package.json:/opt/app/package.json
+      - ./oauth-app/package-lock.json:/opt/app/package-lock.json
+    networks:
+        default:    
+
+
+networks:
+    default:

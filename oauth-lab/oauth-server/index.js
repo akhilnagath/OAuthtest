@@ -2,6 +2,7 @@
 
 const cors = require('cors');
 const express = require('express');
+let PORT = process.env.PORT || '3001';
 
 run().catch(err => console.log(err));
 
@@ -48,7 +49,7 @@ async function run() {
 
   app.use(express.static('./'));
 
-  await app.listen(3001);
+  await app.listen(PORT);
   console.log("OAuth authentication server.")
-  console.log('Listening on port 3001..');
+  console.log(`Listening on port ${PORT}..`);
 }
